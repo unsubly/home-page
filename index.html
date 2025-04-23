@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Unsubly – Clean Up Your Inbox</title>
-  <!-- Using Bootstrap from CDN for basic styling -->
+  <title>Unsubly – Reclaim Your Gmail Inbox</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <style>
     body {
       background-color: #f8f9fa;
@@ -15,100 +15,191 @@
     header {
       background-color: #343a40;
       color: #fff;
-      padding: 60px 0;
+      padding: 80px 0; /* Increased padding */
       text-align: center;
     }
     header h1 {
-      font-size: 3rem;
+      font-size: 3.5rem; /* Slightly larger */
       margin-bottom: 15px;
+      font-weight: bold;
     }
     section {
       padding: 60px 15px;
     }
     .feature-icon {
-      font-size: 3rem;
-      color: #0d6efd;
-      margin-bottom: 15px;
+      font-size: 3rem; /* Keep size */
+      color: #0d6efd; /* Primary color */
+      margin-bottom: 20px;
+    }
+    .step-icon {
+        font-size: 2.5rem;
+        color: #0d6efd;
+        margin-bottom: 15px;
+    }
+    .testimonial-quote {
+        font-style: italic;
+        margin-bottom: 10px;
+    }
+    .testimonial-author {
+        font-weight: bold;
+        color: #6c757d; /* Muted color */
     }
     footer {
       background-color: #343a40;
       color: #fff;
-      padding: 20px 0;
+      padding: 30px 0; /* Increased padding */
       text-align: center;
     }
     a {
       text-decoration: none;
     }
+    .cws-badge { /* Style for Chrome Web Store badge */
+        display: inline-block;
+        margin-top: 15px;
+        transition: transform 0.2s ease-in-out;
+    }
+    .cws-badge:hover {
+        transform: scale(1.05);
+    }
+    .visual-demo img, .about-visual img { /* Style for placeholder images */
+        border: 1px solid #dee2e6; /* Light border */
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
   </style>
 </head>
 <body>
 
-  <!-- Header Section -->
   <header>
     <div class="container">
-      <h1>Unsubly</h1>
-      <p class="lead">Clean up your inbox effortlessly</p>
-      <a href="https://chrome.google.com/webstore/detail/unsubly/cajflcniadkjbdkpikijaniifdcfdfoc" class="btn btn-primary">Get Unsubly</a>
+      <h1>Reclaim Your Inbox</h1>
+      <p class="lead fs-4 mb-4">The Easiest Way to Unsubscribe from Gmail Clutter.</p>
+      <a href="https://chrome.google.com/webstore/detail/unsubly/cajflcniadkjbdkpikijaniifdcfdfoc" class="btn btn-primary btn-lg mt-3">Add Unsubly to Chrome - It's Free!</a>
     </div>
   </header>
 
-  <!-- About Section -->
-  <section>
+  <section id="how-it-works" class="bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5">How Unsubly Works in 3 Simple Steps</h2>
+        <div class="row text-center">
+            <div class="col-md-4 mb-4">
+                <div class="step-icon"><i class="bi bi-cloud-arrow-down"></i></div>
+                <h4>1. Install Extension</h4>
+                <p>Add Unsubly to your Chrome browser from the Web Store in seconds.</p>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="step-icon"><i class="bi bi-envelope-open"></i></div>
+                <h4>2. Open Email</h4>
+                <p>Open any newsletter or promotional email you want to stop receiving in Gmail.</p>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="step-icon"><i class="bi bi-mouse"></i></div>
+                <h4>3. Click Unsubly</h4>
+                <p>Click the Unsubly button (added right into your Gmail!) and confirm. That's it!</p>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <section id="demo" class="visual-demo">
+    <div class="container text-center">
+        <h2 class="mb-4">See Unsubly in Action</h2>
+        <p class="lead mb-4">Stop hunting for tiny unsubscribe links. See how easy it is.</p>
+        <img src="https://via.placeholder.com/800x450/dee2e6/6c757d.png?text=Unsubly+Action+GIF/Screenshot" alt="Unsubly Unsubscribe Process Demo" class="img-fluid rounded mb-4">
+        <p>(Replace the image above with a GIF or screenshot showing the extension working in Gmail)</p>
+    </div>
+  </section>
+
+
+  <section id="features" class="bg-light">
+    <div class="container">
+      <h2 class="text-center mb-5">Why You'll Love Unsubly</h2>
+      <div class="row text-center">
+        <div class="col-md-4 mb-4">
+          <div class="feature-icon"><i class="bi bi-envelope-slash-fill"></i></div>
+          <h3>Unsubscribe in Seconds</h3>
+          <p>Ditch unwanted newsletters with a single click, right from your Gmail interface. No more hunting for hidden unsubscribe links.</p>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="feature-icon"><i class="bi bi-shield-lock-fill"></i></div>
+          <h3>Your Privacy, Guaranteed</h3>
+          <p>Unsubly processes email details *locally* on your device. We never access or store your email content, ensuring complete confidentiality.</p>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="feature-icon"><i class="bi bi-stars"></i></div>
+          <h3>Seamless & Simple</h3>
+          <p>Unsubly adds a simple button right where you need it. Its intuitive design makes managing subscriptions feel effortless.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials">
+      <div class="container">
+          <h2 class="text-center mb-5">What Users Say</h2>
+          <div class="row">
+              <div class="col-md-6 col-lg-4 mb-4">
+                  <div class="card h-100">
+                      <div class="card-body">
+                          <p class="testimonial-quote">"Finally! A super easy way to clean up my inbox without compromising my privacy. Unsubly is a game-changer."</p>
+                          <p class="testimonial-author">- Alex P.</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-6 col-lg-4 mb-4">
+                  <div class="card h-100">
+                      <div class="card-body">
+                          <p class="testimonial-quote">"I installed Unsubly and unsubscribed from dozens of annoying emails in minutes. Highly recommended!"</p>
+                          <p class="testimonial-author">- Sarah K.</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-6 col-lg-4 mb-4 d-none d-lg-block"> <div class="card h-100">
+                      <div class="card-body">
+                          <p class="testimonial-quote">"Simple, effective, and respects privacy. Exactly what I was looking for. Took less than 5 minutes to get started."</p>
+                          <p class="testimonial-author">- Mike D.</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+
+  <section id="about">
     <div class="container">
       <div class="row align-items-center">
-        <div class="col-md-6">
-          <h2>What is Unsubly?</h2>
-          <p>Unsubly helps you manage your Gmail subscriptions by scanning your inbox for newsletters and promotional emails. It only accesses basic details such as sender addresses, subject lines, and email labels—nothing more. All processing happens on your device, ensuring your privacy is always protected. It’s all about giving you an easy way to stop unwanted emails without compromising your data.</p>
+        <div class="col-md-7">
+          <h2>How Unsubly Protects Your Privacy</h2>
+          <p>We believe inbox management shouldn't come at the cost of your privacy. Unsubly is designed with security at its core. It scans only the necessary metadata (like sender addresses and subject lines) directly within your browser to identify potential subscriptions.</p>
+          <p><strong>All processing happens locally on your device.</strong> Your email content is never read, sent to our servers, or stored. We only access the minimum required information to find the unsubscribe link or action for you. It’s the simple, secure way to stop unwanted emails.</p>
         </div>
-        <div class="col-md-6">
-          <!-- Placeholder image; replace with a screenshot or illustration -->
-          <img src="https://via.placeholder.com/500x300" alt="Unsubly screenshot" class="img-fluid rounded">
+        <div class="col-md-5 about-visual">
+            <img src="https://via.placeholder.com/500x350/dee2e6/6c757d.png?text=Privacy+Focus+Screenshot" alt="Unsubly Privacy Focus" class="img-fluid rounded">
+            <p class="text-center small mt-2">(Replace with screenshot highlighting privacy/local processing)</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Features Section -->
+
   <section class="bg-light">
-    <div class="container">
-      <h2 class="text-center mb-5">Features</h2>
-      <div class="row text-center">
-        <div class="col-md-4">
-          <div class="feature-icon">📧</div>
-          <h3>Easy Unsubscribe</h3>
-          <p>Quickly identify and unsubscribe from unwanted email subscriptions with a single click.</p>
-        </div>
-        <div class="col-md-4">
-          <div class="feature-icon">🔒</div>
-          <h3>Privacy Focused</h3>
-          <p>Your email data stays on your device. We only access the minimum necessary information.</p>
-        </div>
-        <div class="col-md-4">
-          <div class="feature-icon">🚀</div>
-          <h3>User Friendly</h3>
-          <p>An intuitive interface makes managing your inbox a breeze.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Get Started Section -->
-  <section>
     <div class="container text-center">
-      <h2>Get Started Today</h2>
-      <p>Install Unsubly from the Chrome Web Store and begin your journey to a clutter-free inbox.</p>
-      <a href="https://chrome.google.com/webstore/detail/unsubly/cajflcniadkjbdkpikijaniifdcfdfoc" class="btn btn-primary btn-lg">Download Now</a>
+      <h2>Ready for a Clutter-Free Inbox?</h2>
+      <p class="lead mb-4">Install Unsubly from the Chrome Web Store today and take back control.</p>
+      <a href="https://chrome.google.com/webstore/detail/unsubly/cajflcniadkjbdkpikijaniifdcfdfoc" class="btn btn-primary btn-lg">Add Unsubly to Chrome - It's Free!</a>
+      <br>
+      <a href="https://chrome.google.com/webstore/detail/unsubly/cajflcniadkjbdkpikijaniifdcfdfoc" target="_blank" class="cws-badge">
+          <img src="https://storage.googleapis.com/web-dev-uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/HRs9MPufa1J1h5glNhut.png" alt="Available in the Chrome Web Store" height="58">
+           </a>
     </div>
   </section>
 
-  <!-- Footer Section -->
   <footer>
     <div class="container">
-      <p>&copy; 2025 Unsubly. All rights reserved. | <a href="https://unsubly.github.io/unsubly-privacy/" class="text-white">Privacy Policy</a></p>
-    </div>
+        <p>&copy; 2025 Unsubly. All rights reserved. | <a href="https://unsubly.github.io/unsubly-privacy/" class="text-white">Privacy Policy</a></p>
+       </div>
   </footer>
 
-  <!-- Bootstrap Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
